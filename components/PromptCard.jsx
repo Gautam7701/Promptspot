@@ -35,8 +35,8 @@ const PromptCard = ({post,handleTagClick, handleEdit, handleDelete}) => {
 
   const creator = post.creator || {};
   return (
-    <div className='prompt_card w-80 sm:w-80 lg:w-96 sm:p-4 bg-white rounded-lg shadow-md flex flex-col gap-2'>
-      <div className='flex justify-between items-start gap-5'>
+    <div className='prompt_card w-full sm:w-80 mx-auto max-w-md lg:w-96 rounded-lg shadow-md flex flex-col gap-2 transition-all duration-200 '>
+      <div className='flex justify-between items-start gap-9'>
         <div className='flex-1 flex justify-start items-center gap-3 cursor-pointer' onClick={handleProfileClick}>
         {post.creator && post.creator.image ? (
             <Image
@@ -51,8 +51,8 @@ const PromptCard = ({post,handleTagClick, handleEdit, handleDelete}) => {
           )}
 
           <div className='flex flex-col'>
-            <h3 className='font-satoshi font-semibold text-gray-900'>{creator.username}</h3>
-            <p className='font-inter text-sm text-gray-500'>{post.creator?.email || "No email available"}</p>
+            <h3 className='font-satoshi font-semibold text-gray-900 truncate'>{creator.username}</h3>
+            <p className='font-inter text-sm text-gray-500 truncate'>{post.creator?.email || "No email available"}</p>
 
           </div>
         </div>
