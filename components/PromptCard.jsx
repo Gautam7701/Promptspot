@@ -35,7 +35,7 @@ const PromptCard = ({post,handleTagClick, handleEdit, handleDelete}) => {
 
   const creator = post.creator || {};
   return (
-    <div className='prompt_card w-full sm:w-80 mx-auto max-w-md lg:w-96 rounded-lg shadow-md flex flex-col gap-2 transition-all duration-200 '>
+    <div className='prompt_card'>
       <div className='flex justify-between items-start gap-9'>
         <div className='flex-1 flex justify-start items-center gap-3 cursor-pointer' onClick={handleProfileClick}>
         {post.creator && post.creator.image ? (
